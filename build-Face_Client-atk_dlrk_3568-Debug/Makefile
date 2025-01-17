@@ -17,7 +17,7 @@ CXX           = /opt/atk-dlrk356x-toolchain/bin/aarch64-buildroot-linux-gnu-g++
 DEFINES       = -DQT_QML_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB
 CFLAGS        = -pipe -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os --sysroot=/opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/sysroot -Wall -Wextra -D_REENTRANT -fPIC $(DEFINES)
 CXXFLAGS      = -pipe -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os --sysroot=/opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/sysroot -std=gnu++1z -Wall -Wextra -D_REENTRANT -fPIC $(DEFINES)
-INCPATH       = -I../Face_Client -I. -I/opt/opencv4-pc/include/opencv4 -I/opt/opencv4-pc/include/opencv4/opencv2 -I/opt/opencv4-pc/include -I/opt/opencv4-pc/include/seeta -I/opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/include/qt5 -I/opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/include/qt5/QtWidgets -I/opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/include/qt5/QtGui -I/opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/include/qt5/QtNetwork -I/opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/include/qt5/QtCore -I. -I/opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/include/libdrm -I/opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/include/valgrind -I. -I/opt/atk-dlrk356x-toolchain/mkspecs/devices/linux-buildroot-g++
+INCPATH       = -I../Face_Client -I. -I/opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/include/opencv4 -I/opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/include/qt5 -I/opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/include/qt5/QtWidgets -I/opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/include/qt5/QtGui -I/opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/include/qt5/QtNetwork -I/opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/include/qt5/QtCore -I. -I/opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/include/libdrm -I/opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/include/valgrind -I. -I/opt/atk-dlrk356x-toolchain/mkspecs/devices/linux-buildroot-g++
 QMAKE         = /opt/atk-dlrk356x-toolchain/usr/bin/qmake
 DEL_FILE      = rm -f
 CHK_DIR_EXISTS= test -d
@@ -40,7 +40,7 @@ DISTNAME      = Face_Client1.0.0
 DISTDIR = /home/alientek/OpenCV_ARM_CAMERA/build-Face_Client-atk_dlrk_3568-Debug/.tmp/Face_Client1.0.0
 LINK          = /opt/atk-dlrk356x-toolchain/bin/aarch64-buildroot-linux-gnu-g++
 LFLAGS        = --sysroot=/opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/sysroot
-LIBS          = $(SUBLIBS) -latomic -L/opt/opencv4-pc/lib -lopencv_world -lSeetaFaceDetector -lSeetaFaceLandmarker -lSeetaFaceRecognizer -lSeetaFaceTracker -lSeetaNet -lSeetaQualityAssessor /opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/lib/libQt5Widgets.so /opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/lib/libQt5Gui.so /opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/lib/libQt5Network.so /opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/lib/libQt5Core.so -L/opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/lib -lmali_hook -lmali_hook_injector -lmali -ldrm -lwayland-client -lwayland-server -lpthread  -lrt -lpthread -ldl 
+LIBS          = $(SUBLIBS) -latomic -L/opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/lib -lopencv_gapi -lopencv_highgui -lopencv_ml -lopencv_objdetect -lopencv_photo -lopencv_stitching -lopencv_video -lopencv_calib3d -lopencv_features2d -lopencv_dnn -lopencv_flann -lopencv_videoio -lopencv_imgcodecs -lopencv_freetype -lopencv_imgproc -lopencv_core /opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/lib/libQt5Widgets.so /opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/lib/libQt5Gui.so /opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/lib/libQt5Network.so /opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/lib/libQt5Core.so -lmali_hook -lmali_hook_injector -lmali -ldrm -lwayland-client -lwayland-server -lpthread  -lrt -lpthread -ldl 
 AR            = /opt/atk-dlrk356x-toolchain/bin/aarch64-buildroot-linux-gnu-ar cqs
 RANLIB        = 
 SED           = sed
@@ -229,6 +229,7 @@ DIST          = /opt/atk-dlrk356x-toolchain/mkspecs/features/spec_pre.prf \
 		/opt/atk-dlrk356x-toolchain/mkspecs/features/default_pre.prf \
 		/opt/atk-dlrk356x-toolchain/mkspecs/features/resolve_config.prf \
 		/opt/atk-dlrk356x-toolchain/mkspecs/features/default_post.prf \
+		/opt/atk-dlrk356x-toolchain/mkspecs/features/link_pkgconfig.prf \
 		/opt/atk-dlrk356x-toolchain/mkspecs/features/qml_debug.prf \
 		/opt/atk-dlrk356x-toolchain/mkspecs/features/warn_on.prf \
 		/opt/atk-dlrk356x-toolchain/mkspecs/features/qt.prf \
@@ -429,6 +430,7 @@ Makefile: ../Face_Client/Face_Client.pro /opt/atk-dlrk356x-toolchain/mkspecs/dev
 		/opt/atk-dlrk356x-toolchain/mkspecs/features/default_pre.prf \
 		/opt/atk-dlrk356x-toolchain/mkspecs/features/resolve_config.prf \
 		/opt/atk-dlrk356x-toolchain/mkspecs/features/default_post.prf \
+		/opt/atk-dlrk356x-toolchain/mkspecs/features/link_pkgconfig.prf \
 		/opt/atk-dlrk356x-toolchain/mkspecs/features/qml_debug.prf \
 		/opt/atk-dlrk356x-toolchain/mkspecs/features/warn_on.prf \
 		/opt/atk-dlrk356x-toolchain/mkspecs/features/qt.prf \
@@ -618,6 +620,7 @@ Makefile: ../Face_Client/Face_Client.pro /opt/atk-dlrk356x-toolchain/mkspecs/dev
 /opt/atk-dlrk356x-toolchain/mkspecs/features/default_pre.prf:
 /opt/atk-dlrk356x-toolchain/mkspecs/features/resolve_config.prf:
 /opt/atk-dlrk356x-toolchain/mkspecs/features/default_post.prf:
+/opt/atk-dlrk356x-toolchain/mkspecs/features/link_pkgconfig.prf:
 /opt/atk-dlrk356x-toolchain/mkspecs/features/qml_debug.prf:
 /opt/atk-dlrk356x-toolchain/mkspecs/features/warn_on.prf:
 /opt/atk-dlrk356x-toolchain/mkspecs/features/qt.prf:
@@ -661,7 +664,7 @@ clean: compiler_clean
 
 distclean: clean 
 	-$(DEL_FILE) $(TARGET) 
-	-$(DEL_FILE) .qmake.stash
+	-$(DEL_FILE) /home/alientek/OpenCV_ARM_CAMERA/build-Face_Client-atk_dlrk_3568-Debug/pkg-config_wrapper.sh .qmake.stash
 	-$(DEL_FILE) Makefile
 
 
@@ -689,7 +692,7 @@ compiler_moc_header_clean:
 moc_faceattendence.cpp: ../Face_Client/faceattendence.h \
 		moc_predefs.h \
 		/opt/atk-dlrk356x-toolchain/bin/moc
-	/opt/atk-dlrk356x-toolchain/bin/moc $(DEFINES) --include /home/alientek/OpenCV_ARM_CAMERA/build-Face_Client-atk_dlrk_3568-Debug/moc_predefs.h -I/opt/atk-dlrk356x-toolchain/mkspecs/devices/linux-buildroot-g++ -I/home/alientek/OpenCV_ARM_CAMERA/Face_Client -I/opt/opencv4-pc/include/opencv4 -I/opt/opencv4-pc/include/opencv4/opencv2 -I/opt/opencv4-pc/include -I/opt/opencv4-pc/include/seeta -I/opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/include/qt5 -I/opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/include/qt5/QtWidgets -I/opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/include/qt5/QtGui -I/opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/include/qt5/QtNetwork -I/opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/include/qt5/QtCore -I. -I/opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/include/c++/10.3.0 -I/opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/include/c++/10.3.0/aarch64-buildroot-linux-gnu -I/opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/include/c++/10.3.0/backward -I/opt/atk-dlrk356x-toolchain/lib/gcc/aarch64-buildroot-linux-gnu/10.3.0/include -I/opt/atk-dlrk356x-toolchain/lib/gcc/aarch64-buildroot-linux-gnu/10.3.0/include-fixed -I/opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/include -I/opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/include ../Face_Client/faceattendence.h -o moc_faceattendence.cpp
+	/opt/atk-dlrk356x-toolchain/bin/moc $(DEFINES) --include /home/alientek/OpenCV_ARM_CAMERA/build-Face_Client-atk_dlrk_3568-Debug/moc_predefs.h -I/opt/atk-dlrk356x-toolchain/mkspecs/devices/linux-buildroot-g++ -I/home/alientek/OpenCV_ARM_CAMERA/Face_Client -I/opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/include/opencv4 -I/opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/include/qt5 -I/opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/include/qt5/QtWidgets -I/opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/include/qt5/QtGui -I/opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/include/qt5/QtNetwork -I/opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/include/qt5/QtCore -I. -I/opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/include/c++/10.3.0 -I/opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/include/c++/10.3.0/aarch64-buildroot-linux-gnu -I/opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/include/c++/10.3.0/backward -I/opt/atk-dlrk356x-toolchain/lib/gcc/aarch64-buildroot-linux-gnu/10.3.0/include -I/opt/atk-dlrk356x-toolchain/lib/gcc/aarch64-buildroot-linux-gnu/10.3.0/include-fixed -I/opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/include -I/opt/atk-dlrk356x-toolchain/aarch64-buildroot-linux-gnu/sysroot/usr/include ../Face_Client/faceattendence.h -o moc_faceattendence.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:

@@ -8,6 +8,25 @@ CONFIG += c++17
 # In order to do so, uncomment the following line.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
+# linux平台opencv seetaface环境
+# LIBS += -L/opt/opencv4-pc/lib \
+# -lopencv_world \
+# -lSeetaFaceDetector \
+# -lSeetaFaceLandmarker \
+# -lSeetaFaceRecognizer \
+# -lSeetaFaceTracker \
+# -lSeetaNet \
+# -lSeetaQualityAssessor \
+
+# INCLUDEPATH += /opt/opencv4-pc/include/opencv4
+# INCLUDEPATH += /opt/opencv4-pc/include/opencv4/opencv2
+# INCLUDEPATH += /opt/opencv4-pc/include
+# INCLUDEPATH += /opt/opencv4-pc/include/seeta
+
+CONFIG += link_pkgconfig
+PKGCONFIG += opencv4
+
+
 SOURCES += \
     main.cpp \
     faceattendence.cpp
@@ -17,23 +36,6 @@ HEADERS += \
 
 FORMS += \
     faceattendence.ui
-
-
-#linux平台opencv seetaface环境
-unix{
-LIBS += -L/opt/opencv4-pc/lib -lopencv_world \
--lSeetaFaceDetector \
--lSeetaFaceLandmarker \
--lSeetaFaceRecognizer \
--lSeetaFaceTracker \
--lSeetaNet \
--lSeetaQualityAssessor \
-
-INCLUDEPATH += /opt/opencv4-pc/include/opencv4
-INCLUDEPATH += /opt/opencv4-pc/include/opencv4/opencv2
-INCLUDEPATH += /opt/opencv4-pc/include
-INCLUDEPATH += /opt/opencv4-pc/include/seeta
-}
 
 
 # Default rules for deployment.

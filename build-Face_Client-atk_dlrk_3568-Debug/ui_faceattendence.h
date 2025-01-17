@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QStatusBar>
@@ -22,6 +23,7 @@ class Ui_FaceAttendence
 {
 public:
     QWidget *centralwidget;
+    QLabel *label;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -29,9 +31,12 @@ public:
     {
         if (FaceAttendence->objectName().isEmpty())
             FaceAttendence->setObjectName(QString::fromUtf8("FaceAttendence"));
-        FaceAttendence->resize(800, 600);
+        FaceAttendence->resize(800, 1280);
         centralwidget = new QWidget(FaceAttendence);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
+        label = new QLabel(centralwidget);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setGeometry(QRect(100, 100, 480, 480));
         FaceAttendence->setCentralWidget(centralwidget);
         menubar = new QMenuBar(FaceAttendence);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -49,6 +54,7 @@ public:
     void retranslateUi(QMainWindow *FaceAttendence)
     {
         FaceAttendence->setWindowTitle(QCoreApplication::translate("FaceAttendence", "FaceAttendence", nullptr));
+        label->setText(QCoreApplication::translate("FaceAttendence", "Hello World", nullptr));
     } // retranslateUi
 
 };

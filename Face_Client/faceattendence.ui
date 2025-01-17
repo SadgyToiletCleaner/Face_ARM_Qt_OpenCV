@@ -7,13 +7,27 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>600</height>
+    <height>1280</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>FaceAttendence</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>100</y>
+      <width>480</width>
+      <height>480</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Hello World</string>
+    </property>
+   </widget>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
